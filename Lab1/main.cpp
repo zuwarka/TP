@@ -165,6 +165,7 @@ void chosen_class(T* q, int n_q) //шаблонная функция для да
 			cout << "\n";
 			break;
 		case 0:
+			cout << "\n";	
 			flag = 0;
 			break;
 		}
