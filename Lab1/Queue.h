@@ -26,7 +26,7 @@ public:
 	int pop(); //удаление элемента очереди
 	void push(int el); //добавление элемента очереди
 	void print(); //вывод на консоль очереди
-	void merge(parQueue& Q1, parQueue& Q2); //слияние двух очередей
+	void merge(parQueue& Q1); //слияние двух очередей
 	void copy(parQueue& Q); //копирование очереди
 	bool isEmpty(); //проверка на заполненность
 
