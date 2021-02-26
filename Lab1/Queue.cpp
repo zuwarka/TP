@@ -92,7 +92,7 @@ void parQueue::copy(parQueue &Q) //метод копирования очере�
 	//cout << "Копирование завершено!" << endl;
 }
 
-void parQueue::merge(parQueue& Q1, parQueue& Q2)
+void parQueue::merge(parQueue& Q1)
 {
 	int* buff1 = new int[Q1.size];
 	Unit* el_queue1 = Q1.last;
@@ -108,21 +108,6 @@ void parQueue::merge(parQueue& Q1, parQueue& Q2)
 		this->push(buff1[i]);
 	}
 	delete[] buff1;
-
-	int* buff2 = new int[Q2.size];
-	Unit* el_queue2 = Q2.last;
-
-	for (int i = Q2.size - 1; i >= 0; i--)
-	{
-		buff2[i] = el_queue2->data;
-		el_queue2 = el_queue2->prev;
-	}
-
-	for (int i = 0; i < Q2.size; i++)
-	{
-		this->push(buff2[i]);
-	}
-	delete[] buff2;
 
 	cout << "Слияние успешно завершено!" << endl;
 }
