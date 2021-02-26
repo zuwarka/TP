@@ -8,7 +8,7 @@ public:
 	int pop(); //удаление элемента очереди
 	void push(int el); //добавление элемента очереди
 	void print(); //вывод на консоль очереди
-	void merge(sonQueue_private& Q1, sonQueue_private& Q2); //слияние двух очередей
+	void merge(sonQueue_private& Q1); //слияние двух очередей
 	void copy(sonQueue_private& Q); //копирование очереди
 	bool isEmpty(); //проверка на заполненность
 };
@@ -20,7 +20,7 @@ public:
 	int pop(); //удаление элемента очереди
 	void push(int el); //добавление элемента очереди
 	void print(); //вывод на консоль очереди
-	void merge(sonQueue_protected& Q1, sonQueue_protected& Q2); //слияние двух очередей
+	void merge(sonQueue_protected& Q1); //слияние двух очередей
 	void copy(sonQueue_protected& Q); //копирование очереди
 	bool isEmpty(); //проверка на заполненность
 };
