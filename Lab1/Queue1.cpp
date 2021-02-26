@@ -43,7 +43,7 @@ int sonQueue_private::function19()
 int sonQueue_private::pop() { return parQueue::pop(); }
 void sonQueue_private::push(int el) { return parQueue::push(el); }
 void sonQueue_private::print() { return parQueue::print(); }
-void sonQueue_private::merge(sonQueue_private& Q1, sonQueue_private& Q2) { return parQueue::merge(Q1, Q2); }
+void sonQueue_private::merge(sonQueue_private& Q1) { return parQueue::merge(Q1); }
 void sonQueue_private::copy(sonQueue_private& Q1) { return parQueue::copy(Q1); }
 bool sonQueue_private::isEmpty() { return parQueue::isEmpty(); }
 
@@ -87,7 +87,7 @@ int sonQueue_protected::function19()
 int sonQueue_protected::pop() { return parQueue::pop(); }
 void sonQueue_protected::push(int el) { return parQueue::push(el); }
 void sonQueue_protected::print() { return parQueue::print(); }
-void sonQueue_protected::merge(sonQueue_protected& Q1, sonQueue_protected& Q2) { return parQueue::merge(Q1, Q2); }
+void sonQueue_protected::merge(sonQueue_protected& Q1) { return parQueue::merge(Q1); }
 void sonQueue_protected::copy(sonQueue_protected& Q1) { return parQueue::copy(Q1); }
 bool sonQueue_protected::isEmpty() { return parQueue::isEmpty(); }
 
