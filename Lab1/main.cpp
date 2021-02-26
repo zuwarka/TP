@@ -117,13 +117,6 @@ void chosen_class(T* q, int n_q) //шаблонная функция для да
 			}
 			else
 			{
-				if (count == n_q)
-				{
-					cout << "Невозможно создать копию очереди, так как количество очередей достигло максимума.\n" << endl;
-					system("pause");
-					break;
-				}
-
 				cout << "С какой очередью произвести слияние?" << endl;
 				cin >> chosen_q;
 
@@ -134,9 +127,16 @@ void chosen_class(T* q, int n_q) //шаблонная функция для да
 					break;
 				}
 
+				if (q[chosen_q].isEmpty())
+				{
+					cout << "Невозможно произвести слияние, так как вторая очередь пуста.\n" << endl;
+					system("pause");
+					break;
+				}
+				
 				system("cls");
-				q[count].merge(q[index], q[chosen_q]);
-				count++; //теперь существует как миниум три очереди с индексами 0, 1, 2...
+				q[index].merge(q[chosen_q]);
+				//count++; //теперь существует как миниум три очереди с индексами 0, 1, 2...
 				cout << "\n";
 			}
 			break;
@@ -154,6 +154,7 @@ void chosen_class(T* q, int n_q) //шаблонная функция для да
 			else
 			{
 				index = chosen_q;
+				count++;
 				system("cls");
 				cout << "Вы переключились на очередь №" << index << endl;
 				cout << "\n";
