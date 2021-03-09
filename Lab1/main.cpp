@@ -87,34 +87,28 @@ void chosen_class(T* q, int n_q) //шаблонная функция для да
 			}
 			break;
 		case 5: //создание копии очереди
-			if (count == 1)
+			if (q[index].isEmpty())
 			{
-				cout << "Существует только одна очередь.\n" << endl;
+				cout << "Очередь пуста, копировать нечего.\n" << endl;
 				system("pause");
 				break;
 			}
 			else
 			{
-				cout << "С какой очередью произвести слияние?" << endl;
+				cout << "В какую ячейку (от 0 до " << n_q - 1 << ") скопировать очередь?" << endl;
 				cin >> chosen_q;
 
-				if ((chosen_q < 0) || (chosen_q >= n_q) || (chosen_q == index))
+				if ((chosen_q < 0) || (chosen_q >= n_q) || (chosen_q == index) || (!q[chosen_q].isEmpty()))
 				{
-					cout << "Некорректное значение!\n" << endl;
+					cout << "Некорректное значение или выбранная очередь занята!\n" << endl;
 					system("pause");
 					break;
 				}
 
-				if (q[chosen_q].isEmpty())
-				{
-					cout << "Невозможно произвести слияние, так как вторая очередь пуста.\n" << endl;
-					system("pause");
-					break;
-				}
-				
 				system("cls");
-				q[index].merge(q[chosen_q]);
-				cout << "\n";
+				q[chosen_q].copy(q[index]);
+				cout << "Очередь успешно скопирована. Теперь существует две равных очереди.\n" << endl;
+				count++; //теперь у нас есть как миниум две очереди с индексами 0 и 1...
 			}
 			break;
 		case 6: //слияние двух очередей
